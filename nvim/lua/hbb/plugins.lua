@@ -41,6 +41,7 @@ return packer.startup(function (use)
   use ('numToStr/Comment.nvim')
   use ('lukas-reineke/indent-blankline.nvim') -- Add indentation guides even on blank lines
   use ('nvim-lualine/lualine.nvim')
+  use ('mg979/vim-visual-multi')
 
   -- nvim-tree
   use ({
