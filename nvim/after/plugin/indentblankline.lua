@@ -10,11 +10,13 @@ indentblankline.setup({
   show_end_of_line = true,
 
   -- need nvim-treesitter for context
-  -- show_current_context = true,
-  -- show_current_context_start = true,
+  show_current_context = true,
+  show_current_context_start = true,
 })
 
 -- Disable colors of this plugin to prevent weird displaying
 vim.cmd('highlight IndentBlanklineChar guifg=NONE gui=nocombine')
 vim.cmd('highlight IndentBlanklineSpaceChar guifg=NONE gui=nocombine')
 vim.cmd('highlight IndentBlanklineSpaceCharBlankline guifg=NONE gui=nocombine')
+vim.cmd('highlight IndentBlanklineContextChar guifg=#928374 gui=nocombine')
+        
