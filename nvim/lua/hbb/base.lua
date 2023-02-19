@@ -49,6 +49,7 @@ vim.opt.signcolumn = 'yes'
 vim.opt.winblend = 0
 vim.opt.wildoptions = 'pum'
 vim.opt.pumblend = 5
+vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
 
 -- split windows
 vim.opt.splitright = true
