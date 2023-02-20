@@ -8,8 +8,6 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 nvimtree.setup({
-  udpate_cwd = true,
-  open_on_setup = true,
   update_focused_file = {
     enable = true,
     update_cwd = true,
@@ -36,3 +34,22 @@ nvimtree.setup({
     ignore = false
   }
 })
+
+-- @see https://github.com/nvim-tree/nvim-tree.lua/wiki/Open-At-Startup
+local function open_nvim_tree(data)
+
+  -- buffer is a directory
+  local directory = vim.fn.isdirectory(data.file) == 1
+
+  if not directory then
+    return
+  end
+
+  -- change to the directory
+  vim.cmd.cd(data.file)
+
+  -- open the tree
+  require("nvim-tree.api").tree.open()
+end
+
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
