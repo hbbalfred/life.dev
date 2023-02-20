@@ -8,6 +8,12 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 nvimtree.setup({
+  udpate_cwd = true,
+  open_on_setup = true,
+  update_focused_file = {
+    enable = true,
+    update_cwd = true,
+  },
   view = {
     mappings = {
       list = {
@@ -21,5 +27,12 @@ nvimtree.setup({
         enable = false,
       }
     }
+  },
+  filters = {
+    dotfiles = false,
+    custom = {'^.git$'}
+  },
+  git = {
+    ignore = false
   }
 })
