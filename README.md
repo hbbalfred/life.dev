@@ -1,12 +1,12 @@
 # Setup My Dev Life
 
-## Install Homebrew [see](https://brew.sh/)
+## Install Homebrew
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-## Install iTerm2 [see](https://iterm2.com/)
+## Install iTerm2
 
 ```sh
 brew install --cask iterm2
@@ -14,7 +14,7 @@ brew install --cask iterm2
 
 ### Change iTerm2 color
 
-- Download my favorite colors - [Gruvbox](https://github.com/morhetz/gruvbox)
+- Download my favorite colors - Gruvbox
 
 ```sh
 curl https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/GruvboxDark.itermcolors --output ~/Download/GruvboxDark.itermcolors
@@ -22,7 +22,7 @@ curl https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/sch
 - Import to iTerm2 color profile
 - Select the color profile
 
-## Install Git [see](https://git-scm.com/)
+## Install Git 
 
 ```sh
 brew install git
@@ -46,7 +46,7 @@ Open the "~/.zshrc" and change the value of `ZSH_THEME` as below
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
 
-Remove to activate the change
+Remeber to activate the change
 
 ```sh
 source ~/.zshrc
@@ -59,7 +59,7 @@ source ~/.zshrc
 1. Download [Liberation-Mono](https://github.com/liberationfonts/liberation-fonts) Fonts Fonts
 2. Download [Font Patcher Script](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FontPatcher.zip) from [Nerd Fonts](https://www.nerdfonts.com/)
 
-### Install FontForge [see](https://fontforge.org/)
+### Install FontForge 
 
 This maybe spend a little bit of time
 
@@ -76,7 +76,7 @@ fontforge --script ./font-patcher --complete liberation-mono/LiberationMono-Ital
 fontforge --script ./font-patcher --complete liberation-mono/LiberationMono-Regular.ttf
 ```
 
-## Install Neovim [see](https://neovim.io/)
+## Install Neovim 
 
 ```sh
 brew install neovim
@@ -85,13 +85,13 @@ brew install neovim
 Configure nvim, see ".config/nvim"
 
 
-## Install TMUX https://github.com/tmux/tmux/wiki
+## Install TMUX
 
 ```sh
 brew install tmux
 ```
 
-### Install tpm https://github.com/tmux-plugins/tpm
+### Install TPM
 
 ```sh
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
