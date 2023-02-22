@@ -1,4 +1,4 @@
-# Liberation Mono Nerd
+# Literation Mono Nerd
 
 This font is base on [Liberation-Mono](https://github.com/liberationfonts/liberation-fonts/releases), and combined with [Nerd Fonts](https://www.nerdfonts.com/).
 
