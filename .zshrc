@@ -131,21 +131,25 @@ alias c='clear'
 alias cl='clear'
 
 # Git commands
-alias gs="git status"
-alias gss="git status -sb"
-alias gl="git log"
 alias ga="git add"
 alias gaa="git add -A"
 alias gal="git add ."
 alias gall="git add ."
-alias gca="git commit -a"
 alias gc="git commit -m"
+alias gca="git commit -a"
 alias gchekout="git checkout"
 alias gckout="git checkout"
+alias gdf="git diff"
+alias gdif="git diff"
+alias gdfc="git diff --cached"
+alias gdifc="git diff --cached"
+alias gl="git log"
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gpush="git push -u origin"
+alias gs="git status"
+alias gss="git status -sb"
 alias gsh='git stash'
 alias gw='git whatchanged'
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gnah="git clean -df && git checkout -- ."
 
 # History commands
@@ -171,6 +175,14 @@ alias 'ps?'='ps aux | grep'
 alias ip='ifconfig en0 | grep inet | grep -v inet6 | cut -d " " -f2'
 # Estimate file space usage to maximum depth
 alias du1='du -h -d 1'
+
+# Shasum
+alias sha256='shasum -a 256'
+alias sha512='shasum -a 512'
+alias 'sha256:f'='shasum -a 256'
+alias 'sha512:f'='shasum -a 512'
+alias 'sha256:t'='f(){ echo -n "$1" | shasum -a 256 | awk '\''{ print $1 }'\'' }; f'
+alias 'sha512:t'='f(){ echo -n "$1" | shasum -a 512 | awk '\''{ print $1 }'\'' }; f'
 
 # Open applications
 alias subl='open -a "Sublime Text"'
