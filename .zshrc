@@ -87,6 +87,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+[ -f ~/.zshrc.alias ] && source ~/.zshrc.alias
+[ -f ~/.zshrc.exports ] && source ~/.zshrc.exports
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -114,95 +117,4 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-#################################################################################
-#      
-#             .o.       ooooo        ooooo       .o.        .oooooo..o 
-#            .888.      `888'        `888'      .888.      d8P'    `Y8 
-#           .8"888.      888          888      .8"888.     Y88bo.      
-#          .8' `888.     888          888     .8' `888.     `"Y8888o.  
-#         .88ooo8888.    888          888    .88ooo8888.        `"Y88b 
-#        .8'     `888.   888       o  888   .8'     `888.  oo     .d8P 
-#       o88o     o8888o o888ooooood8 o888o o88o     o8888o 8""88888P'  
-#                                                                      
-#################################################################################
-                                                               
-# Clear
-alias c='clear'
-alias cl='clear'
-
-# Git commands
-alias ga="git add"
-alias gaa="git add -A"
-alias gal="git add ."
-alias gall="git add ."
-alias gc="git commit -m"
-alias gca="git commit -a"
-alias gchekout="git checkout"
-alias gckout="git checkout"
-alias gdf="git diff"
-alias gdif="git diff"
-alias gdfc="git diff --cached"
-alias gdifc="git diff --cached"
-alias gl="git log"
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gpush="git push -u origin"
-alias gs="git status"
-alias gss="git status -sb"
-alias gsh='git stash'
-alias gw='git whatchanged'
-alias gnah="git clean -df && git checkout -- ."
-
-# History commands
-alias h='history'
-alias h1='history 10'
-alias h2='history 20'
-alias h3='history 30'
-alias 'h?'='history | grep'
-
-# List commands
-alias l='ls -G'
-alias ls='ls -G'
-alias la='ls -G -a'
-alias ll='ls -G -al'
-
-# Exit commands
-alias ':q'='exit'
-alias quit='exit'
-
-# Get system info
-alias 'ps?'='ps aux | grep'
-# Local ip address
-alias ip='ifconfig en0 | grep inet | grep -v inet6 | cut -d " " -f2'
-# Estimate file space usage to maximum depth
-alias du1='du -h -d 1'
-
-# Shasum
-alias sha256='shasum -a 256'
-alias sha512='shasum -a 512'
-alias 'sha256:f'='shasum -a 256'
-alias 'sha512:f'='shasum -a 512'
-alias 'sha256:t'='f(){ echo -n "$1" | shasum -a 256 | awk '\''{ print $1 }'\'' }; f'
-alias 'sha512:t'='f(){ echo -n "$1" | shasum -a 512 | awk '\''{ print $1 }'\'' }; f'
-
-# Open applications
-alias subl='open -a "Sublime Text"'
-alias vscode='open -a "Visual Studio Code"'
-
-# Gzip archives 
-alias gzx='tar -zxvf'
-alias gzc='tar -zcvf'
-# usage: gzxx key file.tgz
-alias gzxx='f(){ openssl des3 -d -k "$1" -salt -in "$2" | tar -zxf -; unset -f f;}; f'
-# usage: gzcc key file.tgz source
-alias gzcc='f(){ tar -zcf - "${@:3}" | openssl des3 -salt -k "$1" -out "$2"; unset -f f;}; f'
-
-# x86 brew on M1
-alias abrew='/opt/homebrew/bin/brew'
-alias ibrew='arch -x86_64 /usr/local/bin/brew'
-
-# Replacement
-alias grep='rg'
-alias vi='nvim'
-
-# Quick reload
-alias rp='source ~/.zshrc'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

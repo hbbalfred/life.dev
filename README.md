@@ -99,16 +99,9 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 Configure tmux, see ".tmux.conf"
 
-## Install ripgrep
+## Install Command Tools 
 
-```sh
-$ brew install ripgrep
-```
-
-Create an alias in "~/.zshrc" to replace `grep`
-
-```sh
-alias grep=rg
-```
-
-Don't forget `source ~/.zshrc`
+- fd
+- fzf
+- ripgrep
+- tree

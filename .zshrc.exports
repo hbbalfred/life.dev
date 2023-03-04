@@ -1,0 +1,16 @@
+######################################################################################
+# Text created by https://patorjk.com/software/taag/#p=display&f=Roman&t=EXPORT
+#   
+#   oooooooooooo ooooooo  ooooo ooooooooo.     .oooooo.   ooooooooo.   ooooooooooooo 
+#   `888'     `8  `8888    d8'  `888   `Y88.  d8P'  `Y8b  `888   `Y88. 8'   888   `8 
+#    888            Y888..8P     888   .d88' 888      888  888   .d88'      888      
+#    888oooo8        `8888'      888ooo88P'  888      888  888ooo88P'       888      
+#    888    "       .8PY888.     888         888      888  888`88b.         888      
+#    888       o   d8'  `888b    888         `88b    d88'  888  `88b.       888      
+#   o888ooooood8 o888o  o88888o o888o         `Y8bood8P'  o888o  o888o     o888o     
+#                                                                                    
+######################################################################################
+                                                               
+# Fzf
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
