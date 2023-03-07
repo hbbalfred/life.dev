@@ -95,6 +95,9 @@ return packer.startup(function (use)
   -- Git
   use ('lewis6991/gitsigns.nvim')
 
+  -- EditorConfig above neovim 0.9
+  use ('gpanders/editorconfig.nvim')
+
 
   if packer_bootstrap then
     require('packer').sync()
