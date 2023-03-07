@@ -2,6 +2,18 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
+-- Move block in visual mode
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+
+-- Cursor position
+vim.keymap.set('n', 'J', 'mzJ`z') -- Fixed cursor when pressed 'J'
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+
+-- Replace in fast
+vim.keymap.set('n', '<leader>r', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
 -- Disable yank with x
 vim.keymap.set('n', 'x', '"_x')
 
@@ -11,6 +23,7 @@ vim.keymap.set('n', '-', '<C-x>')
 
 -- Quick leaving insert
 vim.keymap.set('i', 'jk', '<ESC>')
+vim.keymap.set('i', '<C-c>', '<ESC>')
 
 -- Quick disable highlight
 vim.keymap.set('n', '<leader>nh', ':nohl<CR>')
@@ -43,7 +56,7 @@ vim.keymap.set('n', 'tb', ':tabp<CR>', { silent = true })
 -- PLUGIN KEYMAPS --
 
 -- nvim-tree
-vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { silent = true})
+vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { silent = true })
 
 -- telescope
 vim.keymap.set('n', '<leader><space>', '<cmd>Telescope buffers<CR>')
@@ -52,4 +65,3 @@ vim.keymap.set('n', '<leader>sg', '<cmd>Telescope live_grep<CR>')
 vim.keymap.set('n', '<leader>ss', '<cmd>Telescope grep_string<CR>')
 vim.keymap.set('n', '<leader>sh', '<cmd>Telescope help_tags<CR>')
 vim.keymap.set('n', '<leader>sd', '<cmd>Telescope diagnostics<CR>')
-
