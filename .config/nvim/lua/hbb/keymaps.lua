@@ -44,8 +44,9 @@ vim.keymap.set('n', 's<Down>', '<C-w>j')
 vim.keymap.set('n', 's<Up>', '<C-w>k')
 vim.keymap.set('n', 's<Right>', '<C-w>l')
 -- Resize window
-vim.keymap.set('n', 'se', '<C-w>=')
+vim.keymap.set('n', 's-', '<C-w>=')
 vim.keymap.set('n', 'so', '<C-w>_')
+vim.keymap.set('n', 's0', '<C-w>o')
 
 -- Tabs
 vim.keymap.set('n', 'tt', ':tabedit<CR>', { silent = true })
