@@ -1,0 +1,4 @@
+# switch input method
+cmd + alt - u : /usr/local/bin/im-select com.apple.keylayout.ABC
+cmd + alt - n : /usr/local/bin/im-select com.apple.inputmethod.SCIM.ITABC
+cmd + alt - j : /usr/local/bin/im-select com.apple.inputmethod.Kotoeri.RomajiTyping.Japanese

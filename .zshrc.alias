@@ -14,6 +14,7 @@
 # Clear
 alias c='clear'
 alias cl='clear'
+alias cls="clear; printf '\e[3J'" # clear with scrollback buffer
 
 # Git commands
 alias ga="git add"
