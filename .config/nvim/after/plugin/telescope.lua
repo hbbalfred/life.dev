@@ -10,6 +10,8 @@ telescope.setup({
         ['<C-k>'] = actions.move_selection_previous,
         ['<C-j>'] = actions.move_selection_next,
         ['<C-q>'] = actions.close,
+        ['<C-h>'] = actions.select_horizontal,
+        ['<C-x>'] = actions.delete_buffer,
       },
       n = {
         ['q'] = actions.close
