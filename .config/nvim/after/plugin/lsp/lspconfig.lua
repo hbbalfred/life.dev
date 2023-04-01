@@ -21,6 +21,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '[d', '<cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
   vim.keymap.set('n', ']d', '<cmd>Lspsaga diagnostic_jump_next<CR>', opts)
   vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>', opts)
+  vim.keymap.set('i', '<C-h>', vim.lsp.buf.signature_help, opts)
   -- vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
   -- vim.keymap.set('n', '<leader>o', '<cmd>LSoutlineToggle<CR>', opts)
 
@@ -43,7 +44,7 @@ lspconfig.lua_ls.setup({
       runtime = { version = 'LuaJIT' },
       diagnostics = {
         -- Get the language server to recognize the `vim` global
-        global = { 'vim' }
+        globals = { 'vim' }
       },
       -- workspace = {
       --   -- Make the server aware of Neovim runtime files
