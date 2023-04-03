@@ -62,3 +62,7 @@ lspconfig.tsserver.setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
+
+lspconfig.omnisharp.setup({
+  cmd = { 'omnisharp-mono', '--languageserver', '--hostPID', tostring(vim.fn.getpid()) }
+})

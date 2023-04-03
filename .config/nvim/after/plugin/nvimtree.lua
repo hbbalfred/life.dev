@@ -28,7 +28,7 @@ nvimtree.setup({
   },
   filters = {
     dotfiles = false,
-    custom = {'^.git$'}
+    custom = { '^.git$', '\\.meta$' },
   },
   git = {
     ignore = false
