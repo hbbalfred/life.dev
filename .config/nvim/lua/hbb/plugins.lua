@@ -96,7 +96,9 @@ return packer.startup(function (use)
   use ('lewis6991/gitsigns.nvim')
 
   -- EditorConfig above neovim 0.9
-  use ('gpanders/editorconfig.nvim')
+  if not vim.fn.has('nvim-0.9') then
+    use ('gpanders/editorconfig.nvim')
+  end
 
 
   if packer_bootstrap then
