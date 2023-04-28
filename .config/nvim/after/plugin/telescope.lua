@@ -20,8 +20,8 @@ telescope.setup({
   },
   pickers = {
     find_files = {
-      hidden = true,
-      no_ignore = true,
+      hidden = false,
+      no_ignore = false,
     }
   }
 })

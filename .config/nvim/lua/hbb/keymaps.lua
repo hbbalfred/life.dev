@@ -62,6 +62,7 @@ vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { silent = true })
 -- telescope
 vim.keymap.set('n', '<leader><space>', '<cmd>Telescope buffers<CR>')
 vim.keymap.set('n', '<leader>sf', '<cmd>Telescope find_files<CR>')
+vim.keymap.set('n', '<leader>sF', '<cmd>Telescope find_files hidden=true no_ignore=true<CR>')
 vim.keymap.set('n', '<leader>sg', '<cmd>Telescope live_grep<CR>')
 vim.keymap.set('n', '<leader>ss', '<cmd>Telescope grep_string<CR>')
 vim.keymap.set('n', '<leader>sh', '<cmd>Telescope help_tags<CR>')
