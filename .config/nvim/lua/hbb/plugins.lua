@@ -98,6 +98,9 @@ return packer.startup(function (use)
   -- Rust
   use ('simrat39/rust-tools.nvim')
 
+  -- Tmux
+  use ({'christoomey/vim-tmux-navigator', lazy = false})
+
   if packer_bootstrap then
     require('packer').sync()
   end

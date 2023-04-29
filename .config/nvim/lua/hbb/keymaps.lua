@@ -39,8 +39,8 @@ vim.keymap.set('n', 'sh', '<C-w>h')
 vim.keymap.set('n', 'sj', '<C-w>j')
 vim.keymap.set('n', 'sk', '<C-w>k')
 vim.keymap.set('n', 'sl', '<C-w>l')
-vim.keymap.set('n', 's<Left>', '<C-w>h')
 vim.keymap.set('n', 's<Down>', '<C-w>j')
+vim.keymap.set('n', 's<Left>', '<C-w>h')
 vim.keymap.set('n', 's<Up>', '<C-w>k')
 vim.keymap.set('n', 's<Right>', '<C-w>l')
 -- Resize window
@@ -53,6 +53,13 @@ vim.keymap.set('n', 'tt', ':tabedit<CR>', { silent = true })
 vim.keymap.set('n', 'tq', ':tabclose<CR>', { silent = true })
 vim.keymap.set('n', 'tn', ':tabn<CR>', { silent = true })
 vim.keymap.set('n', 'tb', ':tabp<CR>', { silent = true })
+
+-- TMux
+vim.keymap.set('n', '<C-h>', ':TmuxNavigateLeft<CR>')
+vim.keymap.set('n', '<C-l>', ':TmuxNavigateRight<CR>')
+vim.keymap.set('n', '<C-j>', ':TmuxNavigateDown<CR>')
+vim.keymap.set('n', '<C-k>', ':TmuxNavigateUp<CR>')
+
 
 -- PLUGIN KEYMAPS --
 
