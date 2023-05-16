@@ -58,6 +58,7 @@ lspconfig.lua_ls.setup({
     }
   }
 })
+
 lspconfig.tsserver.setup({
   capabilities = capabilities,
   on_attach = on_attach,
@@ -65,4 +66,16 @@ lspconfig.tsserver.setup({
 
 lspconfig.omnisharp.setup({
   cmd = { 'omnisharp-mono', '--languageserver', '--hostPID', tostring(vim.fn.getpid()) }
+})
+
+local status_rt, rt = pcall(require, 'rust-tools')
+if not status_rt then return end
+rt.setup({
+  server = {
+    on_attach = function(_, bufnr)
+      on_attach(_, bufnr)
+      -- Hover actions
+      vim.keymap.set("n", "K", rt.hover_actions.hover_actions, { buffer = bufnr })
+    end,
+  },
 })
