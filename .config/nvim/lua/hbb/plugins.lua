@@ -101,6 +101,9 @@ return packer.startup(function (use)
   -- Tmux
   use ({'christoomey/vim-tmux-navigator', lazy = false})
 
+  -- Popup terminal in-Vim
+  use ('voldikss/vim-floaterm')
+
   if packer_bootstrap then
     require('packer').sync()
   end
