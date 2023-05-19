@@ -1,9 +1,9 @@
 -- Installed path at ~/.local/share/nvim
 local ensure_packer = function()
   local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
   if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
     vim.cmd [[packadd packer.nvim]]
     return true
   end
@@ -27,24 +27,24 @@ if not status then
   return
 end
 
-return packer.startup(function (use)
+return packer.startup(function(use)
   -- essential
-  use ('wbthomason/packer.nvim')
-  use ('nvim-lua/plenary.nvim')
+  use('wbthomason/packer.nvim')
+  use('nvim-lua/plenary.nvim')
 
   -- colorscheme
-  use ('ellisonleao/gruvbox.nvim')
+  use('ellisonleao/gruvbox.nvim')
 
   -- accessible
-  use ('tpope/vim-surround')
-  use ('vim-scripts/ReplaceWithRegister')
-  use ('numToStr/Comment.nvim')
-  use ('lukas-reineke/indent-blankline.nvim') -- Add indentation guides even on blank lines
-  use ('nvim-lualine/lualine.nvim')
-  use ('mg979/vim-visual-multi')
+  use('tpope/vim-surround')
+  use('vim-scripts/ReplaceWithRegister')
+  use('numToStr/Comment.nvim')
+  use('lukas-reineke/indent-blankline.nvim')  -- Add indentation guides even on blank lines
+  use('nvim-lualine/lualine.nvim')
+  use('mg979/vim-visual-multi')
 
   -- nvim-tree
-  use ({
+  use({
     'nvim-tree/nvim-tree.lua',
     requires = {
       'nvim-tree/nvim-web-devicons'
@@ -53,13 +53,13 @@ return packer.startup(function (use)
   })
 
   -- fuzzy finding !!TELESCOPE!!
-  use ({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }) -- improve performance
-  use ({ 'nvim-telescope/telescope.nvim', branch = '0.1.x' }) 
+  use({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 })  -- improve performance
+  use({ 'nvim-telescope/telescope.nvim', branch = '0.1.x' })
 
   -- LSP/DAP servers manager !!MASON!!
-  use ('williamboman/mason.nvim')
-  use ('williamboman/mason-lspconfig.nvim')
-  use ({
+  use('williamboman/mason.nvim')
+  use('williamboman/mason-lspconfig.nvim')
+  use({
     'neovim/nvim-lspconfig',
     requires = {
       -- LSP configuration
@@ -68,10 +68,10 @@ return packer.startup(function (use)
       'folke/neodev.nvim',
     },
   })
-  use ({ 'glepnir/lspsaga.nvim', branch = 'main' })
+  use({ 'glepnir/lspsaga.nvim', branch = 'main' })
 
   -- Awesome language parser for syntax highlight, auto-editing, code navigation and so on !!TREESITTER!!
-  use ({
+  use({
     'nvim-treesitter/nvim-treesitter',
     run = function()
       pcall(require('nvim-treesitter.install').update { with_sync = true })
@@ -79,7 +79,7 @@ return packer.startup(function (use)
   })
 
   -- autocompletion
-  use ({
+  use({
     'hrsh7th/nvim-cmp',
     requires = {
       'hrsh7th/cmp-buffer',
@@ -90,19 +90,26 @@ return packer.startup(function (use)
       'saadparwaiz1/cmp_luasnip'
     },
   })
-  use ('windwp/nvim-autopairs')
+  use('windwp/nvim-autopairs')
 
   -- Git
-  use ('lewis6991/gitsigns.nvim')
+  use('lewis6991/gitsigns.nvim')
 
   -- Rust
-  use ('simrat39/rust-tools.nvim')
+  use({
+    'rust-lang/rust.vim',
+    ft = 'rust',
+    config = function()
+      vim.g.rustfmt_autosave = 1
+    end
+  })
+  use({ 'simrat39/rust-tools.nvim', ft = 'rust' })
 
   -- Tmux
-  use ({'christoomey/vim-tmux-navigator', lazy = false})
+  use({ 'christoomey/vim-tmux-navigator', lazy = false })
 
   -- Popup terminal in-Vim
-  use ('voldikss/vim-floaterm')
+  use('voldikss/vim-floaterm')
 
   if packer_bootstrap then
     require('packer').sync()
