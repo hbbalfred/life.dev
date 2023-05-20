@@ -39,7 +39,7 @@ return packer.startup(function(use)
   use('tpope/vim-surround')
   use('vim-scripts/ReplaceWithRegister')
   use('numToStr/Comment.nvim')
-  use('lukas-reineke/indent-blankline.nvim')  -- Add indentation guides even on blank lines
+  use('lukas-reineke/indent-blankline.nvim') -- Add indentation guides even on blank lines
   use('nvim-lualine/lualine.nvim')
   use('mg979/vim-visual-multi')
 
@@ -53,7 +53,7 @@ return packer.startup(function(use)
   })
 
   -- fuzzy finding !!TELESCOPE!!
-  use({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 })  -- improve performance
+  use({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }) -- improve performance
   use({ 'nvim-telescope/telescope.nvim', branch = '0.1.x' })
 
   -- LSP/DAP servers manager !!MASON!!
@@ -103,7 +103,7 @@ return packer.startup(function(use)
       vim.g.rustfmt_autosave = 1
     end
   })
-  use({ 'simrat39/rust-tools.nvim', ft = 'rust' })
+  use('simrat39/rust-tools.nvim')
 
   -- Tmux
   use({ 'christoomey/vim-tmux-navigator', lazy = false })
