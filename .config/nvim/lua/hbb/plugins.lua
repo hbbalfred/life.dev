@@ -105,11 +105,33 @@ return packer.startup(function(use)
   })
   use('simrat39/rust-tools.nvim')
 
+  -- TypeScript
+  use {
+    "pmizio/typescript-tools.nvim",
+    requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    config = function()
+      require("typescript-tools").setup {}
+    end,
+  }
+
   -- Tmux
   use({ 'christoomey/vim-tmux-navigator', lazy = false })
 
   -- Popup terminal in-Vim
   use('voldikss/vim-floaterm')
+
+  -- ChatGPT
+  use({
+    "jackMort/ChatGPT.nvim",
+    config = function()
+      require("chatgpt").setup()
+    end,
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    }
+  })
 
   if packer_bootstrap then
     require('packer').sync()

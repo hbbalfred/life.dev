@@ -59,13 +59,15 @@ lspconfig.lua_ls.setup({
   }
 })
 
-lspconfig.tsserver.setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
-})
+-- lspconfig.tsserver.setup({
+--   capabilities = capabilities,
+--   on_attach = on_attach,
+-- })
 
-lspconfig.omnisharp.setup({
-  cmd = { 'omnisharp-mono', '--languageserver', '--hostPID', tostring(vim.fn.getpid()) }
+local status_tst, tst = pcall(require, 'typescript-tools')
+if not status_tst then return end
+tst.setup({
+  on_attach = on_attach,
 })
 
 local status_rt, rt = pcall(require, 'rust-tools')
