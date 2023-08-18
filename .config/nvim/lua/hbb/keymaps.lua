@@ -76,6 +76,4 @@ vim.keymap.set('n', '<leader>sh', '<cmd>Telescope help_tags<CR>')
 vim.keymap.set('n', '<leader>sd', '<cmd>Telescope diagnostics<CR>')
 
 --  vim-floaterm
-vim.keymap.set('n', "<leader>up", ":FloatermNew --name=myfloat --height=0.8 --width=0.7 --autoclose=2 zsh <CR> ")
-vim.keymap.set('n', "T", ":FloatermToggle myfloat<CR>")
-vim.keymap.set('t', "<Esc>", "<C-\\><C-n>:q<CR>")
+vim.keymap.set('n', "<leader>up", ":Lspsaga term_toggle")

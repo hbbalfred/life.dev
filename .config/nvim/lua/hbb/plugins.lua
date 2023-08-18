@@ -68,7 +68,7 @@ return packer.startup(function(use)
       'folke/neodev.nvim',
     },
   })
-  use({ 'glepnir/lspsaga.nvim', branch = 'main' })
+  use({ 'nvimdev/lspsaga.nvim', after = 'nvim-lspconfig' })
 
   -- Awesome language parser for syntax highlight, auto-editing, code navigation and so on !!TREESITTER!!
   use({
@@ -116,9 +116,6 @@ return packer.startup(function(use)
 
   -- Tmux
   use({ 'christoomey/vim-tmux-navigator', lazy = false })
-
-  -- Popup terminal in-Vim
-  use('voldikss/vim-floaterm')
 
   -- ChatGPT
   use({
