@@ -15,8 +15,7 @@ indentblankline.setup({
 })
 
 -- Disable colors of this plugin to prevent weird displaying
-vim.cmd('highlight IndentBlanklineChar guifg=NONE gui=nocombine')
+vim.cmd('highlight IndentBlanklineChar guifg=#808080 gui=nocombine')
 vim.cmd('highlight IndentBlanklineSpaceChar guifg=NONE gui=nocombine')
 vim.cmd('highlight IndentBlanklineSpaceCharBlankline guifg=NONE gui=nocombine')
 vim.cmd('highlight IndentBlanklineContextChar guifg=#928374 gui=nocombine')
-        
