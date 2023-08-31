@@ -78,9 +78,9 @@ alias vscode='open -a "Visual Studio Code"'
 alias gzx='tar -zxvf'
 alias gzc='tar -zcvf'
 # usage: gzxx key file.tgz
-alias gzxx='f(){ openssl des3 -d -k "$1" -salt -in "$2" | tar -zxf -; unset -f f;}; f'
+alias gzxx='f(){ openssl des3 -d -k "$1" -pbkdf2 -iter 1000000 -salt -in "$2" | tar -zxf -; unset -f f;}; f'
 # usage: gzcc key file.tgz source
-alias gzcc='f(){ tar -zcf - "${@:3}" | openssl des3 -salt -k "$1" -out "$2"; unset -f f;}; f'
+alias gzcc='f(){ tar -zcf - "${@:3}" | openssl des3 -salt -k "$1" -pbkdf2 -iter 1000000 -out "$2"; unset -f f;}; f'
 
 # x86 brew on M1
 alias abrew='/opt/homebrew/bin/brew'
