@@ -1,3 +1,2 @@
-require('hbb/base')
-require('hbb/plugins')
-require('hbb/keymaps')
+require('hbb.core')
+require('hbb.lazy')
