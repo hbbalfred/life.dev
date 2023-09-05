@@ -53,9 +53,3 @@ vim.keymap.set('n', 'tt', ':tabedit<CR>', { silent = true })
 vim.keymap.set('n', 'tq', ':tabclose<CR>', { silent = true })
 vim.keymap.set('n', 'tn', ':tabn<CR>', { silent = true })
 vim.keymap.set('n', 'tb', ':tabp<CR>', { silent = true })
-
--- TMux
-vim.keymap.set('n', '<C-h>', ':TmuxNavigateLeft<CR>')
-vim.keymap.set('n', '<C-l>', ':TmuxNavigateRight<CR>')
-vim.keymap.set('n', '<C-j>', ':TmuxNavigateDown<CR>')
-vim.keymap.set('n', '<C-k>', ':TmuxNavigateUp<CR>')
