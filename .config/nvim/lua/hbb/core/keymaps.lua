@@ -53,27 +53,3 @@ vim.keymap.set('n', 'tt', ':tabedit<CR>', { silent = true })
 vim.keymap.set('n', 'tq', ':tabclose<CR>', { silent = true })
 vim.keymap.set('n', 'tn', ':tabn<CR>', { silent = true })
 vim.keymap.set('n', 'tb', ':tabp<CR>', { silent = true })
-
--- TMux
-vim.keymap.set('n', '<C-h>', ':TmuxNavigateLeft<CR>')
-vim.keymap.set('n', '<C-l>', ':TmuxNavigateRight<CR>')
-vim.keymap.set('n', '<C-j>', ':TmuxNavigateDown<CR>')
-vim.keymap.set('n', '<C-k>', ':TmuxNavigateUp<CR>')
-
-
--- PLUGIN KEYMAPS --
-
--- nvim-tree
-vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { silent = true })
-
--- telescope
-vim.keymap.set('n', '<leader><space>', '<cmd>Telescope buffers<CR>')
-vim.keymap.set('n', '<leader>sf', '<cmd>Telescope find_files<CR>')
-vim.keymap.set('n', '<leader>sF', '<cmd>Telescope find_files hidden=true no_ignore=true<CR>')
-vim.keymap.set('n', '<leader>sg', '<cmd>Telescope live_grep<CR>')
-vim.keymap.set('n', '<leader>ss', '<cmd>Telescope grep_string<CR>')
-vim.keymap.set('n', '<leader>sh', '<cmd>Telescope help_tags<CR>')
-vim.keymap.set('n', '<leader>sd', '<cmd>Telescope diagnostics<CR>')
-
---  vim-floaterm
-vim.keymap.set('n', "<leader>up", "<cmd>Lspsaga term_toggle<CR>")
