@@ -6,21 +6,12 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-## Install iTerm2
+<del>## Install iTerm2</del>
+## Install Alacritty
 
 ```sh
-brew install --cask iterm2
+brew install --cask alacritty
 ```
-
-### Change iTerm2 color
-
-- Download my favorite colors - Gruvbox
-
-```sh
-curl https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/GruvboxDark.itermcolors --output ~/Download/GruvboxDark.itermcolors
-```
-- Import to iTerm2 color profile
-- Select the color profile
 
 ## Install Git 
 
@@ -98,6 +89,8 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 Configure tmux, see ".tmux.conf"
+
+[Installing tmux-256color for macOS](https://gist.github.com/bbqtd/a4ac060d6f6b9ea6fe3aabe735aa9d95)
 
 ## Install Command Tools 
 
