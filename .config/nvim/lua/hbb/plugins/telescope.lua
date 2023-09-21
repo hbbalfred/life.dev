@@ -35,8 +35,8 @@ return {
         file_browser = {
           hijack_netrw = true,
           grouped = true,
-          respect_gitignore = false,
-          hidden = true,
+          respect_gitignore = true,
+          hidden = false,
         }
       }
     })
