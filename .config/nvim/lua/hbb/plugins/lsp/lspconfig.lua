@@ -5,6 +5,7 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
     "pmizio/typescript-tools.nvim",
+    "simrat39/rust-tools.nvim",
   },
   config = function()
     -- import lspconfig plugin
@@ -98,5 +99,13 @@ return {
     require("typescript-tools").setup({
       on_attach = on_attach
     })
+
+    -- configure 'rust-tools'
+    require("rust-tools").setup({
+      server = {
+        on_attach = on_attach
+      }
+    })
+
   end,
 }
