@@ -9,11 +9,9 @@ return {
   init = function()
     vim.g.rustfmt_autosave = 1
   end,
-  config = function()
-    require("rust-tools").setup({
-      server = {
-        on_attach = require("hbb.plugins.lsp.shared.config").on_attach
-      }
-    })
-  end,
+  opts = {
+    server = {
+      on_attach = require("hbb.plugins.lsp.shared.config").on_attach
+    }
+  },
 }
