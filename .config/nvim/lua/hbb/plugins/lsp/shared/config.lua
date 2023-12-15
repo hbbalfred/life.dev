@@ -1,10 +1,6 @@
 local M = {}
 
 M.on_attach = function(client, bufnr)
-  -- https://github.com/NvChad/NvChad/blob/v2.0/lua/plugins/configs/lspconfig.lua
-  client.server_capabilities.documentFormattingProvider = false
-  client.server_capabilities.documentRangeFormattingProvider = false
-
   local keymap = vim.keymap   -- for conciseness
 
   local opts = { noremap = true, silent = true }
@@ -58,9 +54,6 @@ M.on_attach = function(client, bufnr)
 
   opts.desc = "Format current buffer with LSP"
   keymap.set('n', '<leader>f', vim.lsp.buf.format, opts)
-  vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
-    vim.lsp.buf.format()
-  end, opts)
 end
 
 return M
