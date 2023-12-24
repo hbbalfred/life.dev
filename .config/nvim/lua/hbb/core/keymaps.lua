@@ -53,3 +53,11 @@ vim.keymap.set('n', 'tt', ':tabedit<CR>', { silent = true })
 vim.keymap.set('n', 'tq', ':tabclose<CR>', { silent = true })
 vim.keymap.set('n', 'tn', ':tabn<CR>', { silent = true })
 vim.keymap.set('n', 'tb', ':tabp<CR>', { silent = true })
+
+-- TreePin
+vim.keymap.set('n', '<leader>tp', ':TPPin<CR>', { silent = true })
+vim.keymap.set('n', '<leader>t+', ':TPGrow<CR>', { silent = true })
+vim.keymap.set('n', '<leader>t-', ':TPShrink<CR>', { silent = true })
+vim.keymap.set('n', '<leader>ts', ':TPShow<CR>', { silent = true })
+vim.keymap.set('n', '<leader>th', ':TPHide<CR>', { silent = true })
+vim.keymap.set('n', '<leader>tq', ':TPClear<CR>', { silent = true })
