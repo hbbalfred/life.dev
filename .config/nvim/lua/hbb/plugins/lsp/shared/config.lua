@@ -41,19 +41,22 @@ M.on_attach = function(client, bufnr)
   keymap.set('i', '<C-h>', vim.lsp.buf.signature_help, opts)
 
   opts.desc = "Hierarchy incoming calls"
-  keymap.set("n", "<leader>vi", "<cmd>Lspsaga incoming_calls<CR>", opts) -- https://nvimdev.github.io/lspsaga/callhierarchy/
+  keymap.set("n", "<leader>vv", "<cmd>Lspsaga incoming_calls<CR>", opts) -- https://nvimdev.github.io/lspsaga/callhierarchy/
+
   opts.desc = "Hierarchy outgoing calls"
-  keymap.set("n", "<leader>vc", "<cmd>Lspsaga outgoing_calls<CR>", opts) -- https://nvimdev.github.io/lspsaga/callhierarchy/
+  keymap.set("n", "<leader>vV", "<cmd>Lspsaga outgoing_calls<CR>", opts) -- https://nvimdev.github.io/lspsaga/callhierarchy/
+
   opts.desc = "Outline"
   keymap.set("n", "<leader>vo", "<cmd>Lspsaga outline<CR>", opts) -- https://nvimdev.github.io/lspsaga/outline/
+
   opts.desc = "Finder"
-  keymap.set("n", "<leader>vf", "<cmd>Lspsaga finder<CR>", opts) -- https://nvimdev.github.io/lspsaga/finder/
+  keymap.set("n", "<leader>va", "<cmd>Lspsaga finder<CR>", opts) -- https://nvimdev.github.io/lspsaga/finder/
 
   opts.desc = "Restart LSP"
   keymap.set("n", "<leader>rs", "<cmd>LspRestart<CR>", opts) -- mapping to restart lsp if necessary
 
   opts.desc = "Format current buffer with LSP"
-  keymap.set('n', '<leader>f', vim.lsp.buf.format, opts)
+  keymap.set('n', '<leader>fm', vim.lsp.buf.format, opts)
 end
 
 return M
