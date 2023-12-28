@@ -10,10 +10,18 @@ return {
     require("nvim-tree").setup({
       filters = {
         dotfiles = false,
+        custom = { ".DS_Store" }
       },
       view = {
         adaptive_size = true,
         relativenumber = true,
+      },
+      actions = {
+        open_file = {
+          window_picker = {
+            enable = false,
+          },
+        },
       },
     })
   end,
