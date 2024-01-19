@@ -1,0 +1,52 @@
+import = ["/Users/hbb/.config/alacritty/themes/gruvbox_dark.toml"]
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 15.0
+
+[font.bold]
+family = "LiterationMono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "LiterationMono Nerd Font"
+style = "Bold Italic"
+
+[font.glyph_offset]
+x = 0
+y = 1
+
+[font.italic]
+family = "LiterationMono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "LiterationMono Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 8
+
+[[keyboard.bindings]]
+chars = "\u001BF"
+key = "F"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001BB"
+key = "B"
+mods = "Alt"
+
+[window]
+decorations = "buttonless"
+startup_mode = "Maximized"
+
+[window.padding]
+x = 5
+y = 5
