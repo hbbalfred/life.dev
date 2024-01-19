@@ -10,7 +10,8 @@ return {
     require("nvim-tree").setup({
       filters = {
         dotfiles = false,
-        custom = { ".DS_Store" }
+        custom = { ".DS_Store" },
+        exclude = { ".env*", "node_modules/*" }
       },
       view = {
         adaptive_size = true,
