@@ -6,6 +6,6 @@ return {
     "neovim/nvim-lspconfig",
   },
   opts = {
-    on_attach = require("hbb.plugins.lsp.shared.config").on_attach
+    on_attach = require("hbb.utils.lsp").on_attach
   },
 }

@@ -13,7 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   {import = "hbb.plugins"},
-  {import = "hbb.plugins.lsp"},
 }, {
   checker = {
     enabled = true,

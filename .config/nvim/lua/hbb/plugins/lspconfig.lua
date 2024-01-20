@@ -16,7 +16,7 @@ return {
     -- configure lua server (with special settings)
     lspconfig["lua_ls"].setup({
       capabilities = capabilities,
-      on_attach = require("hbb.plugins.lsp.shared.config").on_attach,
+      on_attach = require("hbb.utils.lsp").on_attach,
       settings = { -- custom settings for lua
         Lua = {
           -- make the language server recognize "vim" global
