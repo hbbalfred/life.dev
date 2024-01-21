@@ -12,11 +12,12 @@ return {
     -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
+    local on_attach = require("hbb.utils.lsp").on_attach
 
     -- configure lua server (with special settings)
     lspconfig["lua_ls"].setup({
       capabilities = capabilities,
-      on_attach = require("hbb.utils.lsp").on_attach,
+      on_attach = on_attach,
       settings = { -- custom settings for lua
         Lua = {
           -- make the language server recognize "vim" global
@@ -32,6 +33,12 @@ return {
           },
         },
       },
+    })
+
+    lspconfig.jsonls.setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      filetypes = { "json", "jsonc" },
     })
 
   end,
