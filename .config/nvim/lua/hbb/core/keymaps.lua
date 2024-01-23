@@ -50,7 +50,3 @@ vim.keymap.set('n', '<leader>ff', ':Telescope find_files<CR>')
 vim.keymap.set('n', '<leader>fa', ':Telescope find_files hidden=true no_ignore=true<CR>')
 vim.keymap.set('n', '<leader>fg', ':Telescope live_grep<CR>')
 vim.keymap.set('n', '<leader>f1', ':Telescope help_tags<CR>')
--- set keymaps for file browser
--- vim.keymap.set('n', '<leader>e', ':Telescope file_browser path=%:p:h select_buffer=true<CR>')
-vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { desc = 'Toggle file explorer' })
-vim.keymap.set('n', '<leader>E', ':NvimTreeFindFileToggle<CR>', { desc = 'Toggle file explorer on current file' })
