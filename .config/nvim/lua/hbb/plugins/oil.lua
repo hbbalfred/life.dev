@@ -2,7 +2,7 @@ return {
   'stevearc/oil.nvim',
   dependencies = { "nvim-tree/nvim-web-devicons" },
   init = function ()
-    vim.keymap.set("n", "<leader>e", ":Oil --float .")
+    vim.keymap.set("n", "<leader>e", ":Oil --float<CR>")
   end,
   opts = {
     view_options = {
