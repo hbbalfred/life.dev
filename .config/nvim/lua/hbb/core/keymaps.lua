@@ -26,7 +26,7 @@ vim.keymap.set('i', 'jk', '<ESC>')
 vim.keymap.set('i', '<C-c>', '<ESC>')
 
 -- Quick disable highlight
-vim.keymap.set('n', '<leader>nh', ':nohl<CR>')
+vim.keymap.set('n', ',', ':nohl<CR>')
 
 -- Split window
 vim.keymap.set('n', '<leader>ss', ':sp<CR>', { silent = true })
@@ -39,10 +39,10 @@ vim.keymap.set('n', '<leader>so', ':TZFocus<CR>')
 vim.keymap.set('n', '<leader>s0', '<C-w>o')
 
 -- Tabs
-vim.keymap.set('n', '<leader>tt', ':tabedit<CR>', { silent = true })
+vim.keymap.set('n', '<leader>tb', ':tabedit<CR>', { silent = true })
 vim.keymap.set('n', '<leader>tq', ':tabclose<CR>', { silent = true })
-vim.keymap.set('n', '<leader>tn', ':tabn<CR>', { silent = true })
-vim.keymap.set('n', '<leader>tb', ':tabp<CR>', { silent = true })
+vim.keymap.set('n', '<leader>th', ':tabn<CR>', { silent = true })
+vim.keymap.set('n', '<leader>tl', ':tabp<CR>', { silent = true })
 
 -- Telescope
 vim.keymap.set('n', '<leader><space>', ':Telescope buffers<CR>')
