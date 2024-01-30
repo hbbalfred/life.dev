@@ -39,7 +39,7 @@ if vim.fn.has('macunix') == 1 then
   vim.opt.clipboard:append('unnamedplus')
 end
 if vim.fn.has('win32') == 1 then
-  vim.opt.clipboard:prepend{'unnamedplus', 'unnamedplus'}
+  vim.opt.clipboard:prepend { 'unnamedplus', 'unnamedplus' }
 end
 
 -- appearance
@@ -59,4 +59,11 @@ vim.opt.splitbelow = true
 vim.api.nvim_create_autocmd('InsertLeave', {
   pattern = '*',
   command = 'set nopaste'
+})
+-- AutoSave
+vim.api.nvim_create_autocmd('BufWritePre', {
+  buffer = vim.api.nvim_get_current_buf(),
+  callback = function()
+    vim.lsp.buf.format { async = false }
+  end
 })
