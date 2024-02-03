@@ -7,6 +7,8 @@ return {
         ["<CR>"] = "TogglePreview",
         ["<C-f>"] = "ScrollOutputDown",
         ["<C-b>"] = "ScrollOutputUp",
+        ["<C-h>"] = false,
+        ["<C-l>"] = false,
         ["/"] = "RunAction",
         ["i"] = "Edit",
         ["x"] = "<CMD>OverseerQuickAction dispose<CR>",
