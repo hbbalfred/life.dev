@@ -15,7 +15,7 @@ return {
     local on_attach = require("hbb.utils.lsp").on_attach
 
     -- configure lua server (with special settings)
-    lspconfig["lua_ls"].setup({
+    lspconfig.lua_ls.setup({
       capabilities = capabilities,
       on_attach = on_attach,
       settings = { -- custom settings for lua
@@ -39,6 +39,13 @@ return {
       capabilities = capabilities,
       on_attach = on_attach,
       filetypes = { "json", "jsonc" },
+    })
+
+    -- @dependency {https://github.com/razzmatazz/csharp-language-server}
+    -- @dependency {export DOTNET_ROOT & export DOTNET_TOOLS}
+    lspconfig.csharp_ls.setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
     })
 
   end,
