@@ -32,7 +32,7 @@ style = "Regular"
 
 [font.offset]
 x = 0
-y = 8
+y = 4
 
 [[keyboard.bindings]]
 chars = "\u001BF"
@@ -49,5 +49,5 @@ decorations = "buttonless"
 startup_mode = "Maximized"
 
 [window.padding]
-x = 5
-y = 5
+x = 4
+y = 4

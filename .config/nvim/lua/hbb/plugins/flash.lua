@@ -9,7 +9,7 @@ return {
     },
     jump = {
       pos = "end",
-      offset = 1,
+      offset = 0,
     },
   },
   keys = {
