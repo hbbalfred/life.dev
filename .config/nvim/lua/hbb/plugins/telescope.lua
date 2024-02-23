@@ -11,6 +11,14 @@ return {
     local actions = require("telescope.actions")
 
     telescope.setup({
+      pickers = {
+        lsp_references = {
+          fname_width = 40,
+          path_display = {
+            shorten = { len = 1, exclude = { 1, -1 } }
+          },
+        },
+      },
       defaults = {
         -- path_display = { "truncate" },
         file_ignore_patterns = {
@@ -21,11 +29,13 @@ return {
             ['<C-k>'] = actions.move_selection_previous, -- move to prev result
             ['<C-j>'] = actions.move_selection_next,     -- move to next result
             ['<C-q>'] = actions.close,
-            ['<C-h>'] = actions.select_horizontal,
+            -- ['<C-h>'] = actions.select_horizontal,
             ['<C-x>'] = actions.delete_buffer,
+            ['<C-p>'] = actions.send_to_qflist + actions.open_qflist,
           },
           n = {
-            ['q'] = actions.close
+            ['q'] = actions.close,
+            ['<C-q>'] = actions.close,
           }
         },
       },
