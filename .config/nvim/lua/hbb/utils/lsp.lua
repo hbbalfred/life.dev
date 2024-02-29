@@ -56,7 +56,7 @@ M.on_attach = function(client, bufnr)
   keymap.set("n", "<leader>rs", "<cmd>LspRestart<CR>", opts) -- mapping to restart lsp if necessary
 
   opts.desc = "Format current buffer with LSP"
-  keymap.set('n', '<leader>fm', vim.lsp.buf.format, opts)
+  keymap.set('n', '<leader>F', vim.lsp.buf.format, opts)
 end
 
 return M
