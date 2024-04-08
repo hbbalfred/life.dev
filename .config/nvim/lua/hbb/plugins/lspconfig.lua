@@ -48,5 +48,7 @@ return {
       on_attach = on_attach,
     })
 
+    lspconfig.gdscript.setup({})
+
   end,
 }
