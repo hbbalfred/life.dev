@@ -87,6 +87,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+eval "$(zoxide init zsh)"
+
 [ -f ~/.zshrc.alias ] && source ~/.zshrc.alias
 [ -f ~/.zshrc.exports ] && source ~/.zshrc.exports
 
@@ -118,3 +120,7 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+###_BEGIN_Completion_ae
+test -e "/Users/chenran/.completion/ae.completion.sh" &&  source "/Users/chenran/.completion/ae.completion.sh"
+###_END_Completion_ae
