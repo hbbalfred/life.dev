@@ -36,6 +36,7 @@ alias gl="git log"
 alias glo="git shortlog"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gpush="git push -u origin"
+alias gpull="git pull --rebase"
 alias gs="git status"
 alias gss="git status -sb"
 alias gsh='git stash'
