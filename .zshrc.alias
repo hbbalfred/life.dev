@@ -51,7 +51,7 @@ alias h3='history 30'
 alias 'h?'='history | grep'
 
 # List commands
-alias ls='eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions'
+alias ls='eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first'
 alias l='eza -l'
 alias la='eza -l -a'
 alias ll='eza -l'
