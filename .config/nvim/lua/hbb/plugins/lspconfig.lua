@@ -48,7 +48,8 @@ return {
       on_attach = on_attach,
     })
 
-    lspconfig.gdscript.setup({})
+    -- lspconfig.gdscript.setup({})
 
+    lspconfig.zls.setup{}
   end,
 }
