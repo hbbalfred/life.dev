@@ -1,6 +1,8 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 #
 # https://github.com/niscolas/nvim-godot
+
+. $HOME/.zprofile
 
 # CHANGE IF NEEDED: 
 # - replace with your Terminal Emulator executable
@@ -11,11 +13,11 @@ nvim_exec="nvim"
 server_path="$HOME/.cache/nvim/godot-server.pipe"
 
 start_server() {
-  "$term_exec" -o "working_directory=\"$(pwd)\"" -e "$nvim_exec" --listen "$server_path" "$1"
+  "$term_exec" --working-directory "$(pwd)" -e "$nvim_exec" --listen "$server_path" "$1"
 }
 
 open_file_in_server() {
-  "$term_exec" -o "working_directory=\"$(pwd)\"" -e "$nvim_exec" --server "$server_path" --remote-send "<C-\><C-n>:n $1<CR>:call cursor($2)<CR>"
+  "$term_exec" --working-directory "$(pwd)" -e "$nvim_exec" --server "$server_path" --remote-send "<C-\><C-n>:n $1<CR>:call cursor($2)<CR>"
 }
 
 if ! [ -e "$server_path" ]; then
