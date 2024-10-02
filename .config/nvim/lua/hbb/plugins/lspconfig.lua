@@ -35,6 +35,15 @@ return {
       },
     })
 
+    -- configure json for formatting
+    lspconfig.jsonls.setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      init_options = {
+        provideFormatter = true
+      }
+    })
+
     -- @dependency {https://github.com/razzmatazz/csharp-language-server}
     -- @dependency {export DOTNET_ROOT & export DOTNET_TOOLS}
     lspconfig.csharp_ls.setup({
@@ -42,8 +51,6 @@ return {
       on_attach = on_attach,
     })
 
-    -- lspconfig.gdscript.setup({})
-
-    lspconfig.zls.setup{}
+    lspconfig.zls.setup {}
   end,
 }
