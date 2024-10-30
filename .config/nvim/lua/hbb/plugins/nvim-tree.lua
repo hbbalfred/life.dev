@@ -21,6 +21,7 @@ return {
       view = {
         adaptive_size = true,
         relativenumber = true,
+        width = { min = 30, max = 50 }
       },
       actions = {
         open_file = {
