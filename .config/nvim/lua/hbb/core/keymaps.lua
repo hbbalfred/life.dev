@@ -46,7 +46,7 @@ vim.keymap.set('n', '<leader>tl', ':tabp<CR>', { silent = true })
 
 -- Telescope
 vim.keymap.set('n', '<leader><space>', ':Telescope buffers<CR>')
-vim.keymap.set('n', '<leader>f', ':Telescope find_files<CR>')
+vim.keymap.set('n', '<leader>p', ':Telescope find_files<CR>')
 vim.keymap.set('n', '<leader>gg', ':Telescope git_files<CR>')
 vim.keymap.set('n', '<leader>ga', ':Telescope find_files hidden=true no_ignore=true<CR>')
 vim.keymap.set('n', '<leader>gs', ':Telescope live_grep<CR>')
