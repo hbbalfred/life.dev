@@ -19,6 +19,7 @@ return {
       ensure_installed = {
         "bash",
         "css",
+        "c_sharp",
         "dockerfile",
         "gitignore",
         "html",
