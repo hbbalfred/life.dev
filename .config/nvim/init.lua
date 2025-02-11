@@ -1,2 +1,2 @@
-require('hbb.core')
-require('hbb.lazy')
+require("hbb.core")
+require("hbb.lazy")
