@@ -8,7 +8,7 @@ return {
 				json = { "biome" },
 				javascript = { "biome", "prettierd", "prettier", stop_after_first = true },
 				typescript = { "biome", "prettierd", "prettier", stop_after_first = true },
-				cs = { "csharpier" },
+				cs = { "csharpier", timeout_ms = 10000 },
 			},
 		})
 	end,
