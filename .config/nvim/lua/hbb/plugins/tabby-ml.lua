@@ -1,5 +1,6 @@
 return {
 	"TabbyML/vim-tabby",
+  enabled = false,
 	lazy = false,
 	dependencies = {
 		"neovim/nvim-lspconfig",
