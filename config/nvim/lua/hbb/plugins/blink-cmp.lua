@@ -28,9 +28,17 @@ return {
 
 			["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
 			["<C-e>"] = { "hide", "fallback" },
-			["<CR>"] = { "accept", "fallback" },
+			-- ["<CR>"] = { "select_and_accept", "fallback" },
 
-			["<Tab>"] = { "snippet_forward", "fallback" },
+			["<Tab>"] = {
+				function(cmp)
+					if cmp.snippet_active() then return cmp.accept()
+					else return cmp.select_and_accept()
+					end
+				end,
+				"snippet_forward",
+				"fallback",
+			},
 			["<S-Tab>"] = { "snippet_backward", "fallback" },
 
 			["<Up>"] = { "select_prev", "fallback" },
