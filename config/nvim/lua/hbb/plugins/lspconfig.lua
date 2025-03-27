@@ -39,6 +39,7 @@ return {
 				},
 			},
 			csharp_ls = {},
+      pylsp = {},
 		},
 	},
 }
