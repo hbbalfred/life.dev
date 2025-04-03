@@ -9,7 +9,7 @@ return {
 		local lspconfig = require("lspconfig")
 
 		for server, config in pairs(opts.servers) do
-			config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
+			-- config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
 			config.on_attach = require("hbb.utils.lsp").on_attach
 			lspconfig[server].setup(config)
 		end
