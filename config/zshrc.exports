@@ -39,3 +39,8 @@ _fzf_comprun() {
     *)            fzf --preview "$show_file_or_dir_preview"                  "$@" ;;
   esac
 }
+
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
