@@ -13,6 +13,15 @@ return {
 			config.on_attach = require("hbb.utils.lsp").on_attach
 			lspconfig[server].setup(config)
 		end
+
+    -- Filter out the "window/showMessage" handler to avoid forcely confirming in csharp_ls
+		lspconfig.csharp_ls.setup({
+			handlers = {
+				["window/showMessage"] = function(_, result, _)
+					vim.notify(result.message, result.type, { timeout = 500 })
+				end,
+			},
+		})
 	end,
 	opts = {
 		servers = {
