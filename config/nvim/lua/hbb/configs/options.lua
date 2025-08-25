@@ -36,10 +36,10 @@ vim.opt.cursorline = true
 vim.opt.iskeyword:append("-")
 -- clipboard
 if vim.fn.has("macunix") == 1 then
-	vim.opt.clipboard:append("unnamedplus")
+    vim.opt.clipboard:append("unnamedplus")
 end
 if vim.fn.has("win32") == 1 then
-	vim.opt.clipboard:prepend({ "unnamedplus", "unnamedplus" })
+    vim.opt.clipboard:prepend({ "unnamedplus", "unnamedplus" })
 end
 
 -- appearance
@@ -57,6 +57,6 @@ vim.opt.splitbelow = true
 
 -- Turn off paste mode when leaving insert
 vim.api.nvim_create_autocmd("InsertLeave", {
-	pattern = "*",
-	command = "set nopaste",
+    pattern = "*",
+    command = "set nopaste",
 })

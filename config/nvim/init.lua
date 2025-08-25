@@ -1,2 +1,6 @@
-require("hbb.core")
-require("hbb.lazy")
+require("hbb.core.mason-path")
+require("hbb.configs.filetype")
+require("hbb.configs.keymaps")
+require("hbb.configs.options")
+require("hbb.core.lsp")
+require("hbb.core.lazy")
