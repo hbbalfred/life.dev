@@ -6,7 +6,7 @@ return {
         vim.g.rustfmt_autosave = 1
         vim.g.rustaceanvim = {
             server = {
-                on_attach = require("hbb.utils.lsp").on_attach,
+                -- on_attach = require("hbb.utils.lsp").on_attach,
                 settings = {
                     ["rust-analyzer"] = {
                         cargo = {
