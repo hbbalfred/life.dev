@@ -20,7 +20,14 @@ return {
                 },
             },
             defaults = {
-                -- path_display = { "truncate" },
+                sorting_strategy = "ascending",
+                layout_strategy = "vertical",
+                layout_config = {
+                    prompt_position = "top",
+                    width = 0.6,
+                    preview_cutoff = 1,
+                    preview_height = 0.6,
+                },
                 file_ignore_patterns = {
                     "%.meta", -- unity
                 },
