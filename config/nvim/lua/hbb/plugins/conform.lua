@@ -9,6 +9,8 @@ return {
             typescript = { "biome", "prettierd", "prettier", stop_after_first = true },
             cs = { "csharpier", timeout_ms = 10000 },
             python = { "isort", "black", timeout_ms = 10000 },
+            c = { "clang-format" },
+            cpp = { "clang-format" },
         },
         -- log_level = vim.log.levels.DEBUG,
         formatters = {
