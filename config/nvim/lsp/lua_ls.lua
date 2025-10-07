@@ -19,7 +19,7 @@ return {
             workspace = {
                 checkThirdParty = false,
                 library = {
-                    "~/.local/share/mylib/love2d",
+                    "~/.local/share/love2d",
                 },
             },
         },
