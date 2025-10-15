@@ -16,12 +16,6 @@ return {
             hint = { enable = true },
             telemetry = { enable = false },
             diagnostics = { globals = { "vim", "love" } },
-            workspace = {
-                checkThirdParty = false,
-                library = {
-                    "~/.local/share/love2d",
-                },
-            },
         },
     },
 }
