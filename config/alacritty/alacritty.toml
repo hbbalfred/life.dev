@@ -52,4 +52,4 @@ x = 2
 y = 2
 
 [general]
-import = ["~/.config/alacritty/themes/gruvbox_material_medium_dark.toml"]
+import = ["~/.config/alacritty/themes/gruvbox_material.toml"]

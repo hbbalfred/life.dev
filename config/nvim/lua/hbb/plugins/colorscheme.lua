@@ -4,7 +4,7 @@ return {
     config = function()
         require("gruvbox").setup({
             transparent_mode = false,
-            contrast = "soft",
+            contrast = "hard",
         })
 
         -- load the colorscheme here
