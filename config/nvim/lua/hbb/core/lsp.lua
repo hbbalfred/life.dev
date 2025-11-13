@@ -57,7 +57,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
         -- set keybinds
         kmap("gR", "<cmd>Telescope lsp_references<CR>", "Show LSP references")
         kmap("gD", vim.lsp.buf.declaration, "Go to declaration")
-        kmap("gd", "<cmd>Telescope lsp_definitions<CR>", "Show LSP definitions")
+        kmap("gd", vim.lsp.buf.definition, "Show LSP definitions")
         kmap("gi", "<cmd>Telescope lsp_implementations<CR>", "Show LSP implementations")
         kmap("gt", "<cmd>Telescope lsp_type_definitions<CR>", "Show LSP type definitions")
 

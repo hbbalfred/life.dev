@@ -1,5 +1,6 @@
 return {
     "mrcjkb/rustaceanvim",
+    enabled = false,
     version = "^6",
     lazy = false,
     init = function()
