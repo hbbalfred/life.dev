@@ -54,35 +54,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
             vim.keymap.set(mode, keys, func, { buffer = ev.buf, noremap = true, silent = true, desc = desc })
         end
 
-        -- set keybinds
-        kmap("gR", "<cmd>Telescope lsp_references<CR>", "Show LSP references")
-        kmap("gD", vim.lsp.buf.declaration, "Go to declaration")
-        kmap("gd", vim.lsp.buf.definition, "Show LSP definitions")
-        kmap("gi", "<cmd>Telescope lsp_implementations<CR>", "Show LSP implementations")
-        kmap("gt", "<cmd>Telescope lsp_type_definitions<CR>", "Show LSP type definitions")
-
-        kmap("<leader>ca", vim.lsp.buf.code_action, "See available code actions", { "n", "v" })
-
-        kmap("<leader>rrn", vim.lsp.buf.rename, "Rename without select")
-        kmap("<leader>rn", "<cmd>Lspsaga rename<CR>", "Rename within select")
-
-        kmap("<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", "Show buffer diagnostics")
-        kmap("<leader>d", vim.diagnostic.open_float, "Show line diagnostics")
-        -- kmap("[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", "Go to previous diagnostic")
-        -- kmap("]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", "Go to next diagnostic")
-
-        kmap("K", vim.lsp.buf.hover, "Show documentation for what is under cursor")
-        kmap("<C-h>", vim.lsp.buf.signature_help, "Show LSP signature", "i")
-
-        kmap("<leader>vv", "<cmd>Lspsaga incoming_calls<CR>", "Hierarchy incoming calls")
-        kmap("<leader>vV", "<cmd>Lspsaga outgoing_calls<CR>", "Hierarchy outgoing calls")
-        kmap("<leader>vo", "<cmd>Lspsaga outline<CR>", "Outline")
-        kmap("<leader>va", "<cmd>Lspsaga finder<CR>", "Finder")
-
-        -- kmap("<leader>rs", "<cmd>LspRestart<CR>", "Restart LSP")
-
-        -- kmap('n', '<leader>F', vim.lsp.buf.format, opts)
-        kmap("<leader>F", require("conform").format, "Format current buffer with LSP")
+        kmap("<leader>ca", vim.lsp.buf.code_action, "Code actions", { "n", "v" })
+        -- kmap("<leader>rrn", vim.lsp.buf.rename, "Rename without select")
+        -- kmap("<leader>rn", function() return ":IncRename" .. vim.fn.expand("<cword>") end, "Rename")
+        kmap("K", vim.lsp.buf.hover, "Signature")
+        kmap("<C-h>", vim.lsp.buf.signature_help, "Signature", "i")
+        kmap("<leader>F", require("conform").format, "Format")
     end,
 })
 
