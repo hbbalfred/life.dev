@@ -55,8 +55,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
         end
 
         kmap("<leader>ca", vim.lsp.buf.code_action, "Code actions", { "n", "v" })
-        -- kmap("<leader>rrn", vim.lsp.buf.rename, "Rename without select")
-        -- kmap("<leader>rn", function() return ":IncRename" .. vim.fn.expand("<cword>") end, "Rename")
         kmap("K", vim.lsp.buf.hover, "Signature")
         kmap("<C-h>", vim.lsp.buf.signature_help, "Signature", "i")
         kmap("<leader>F", require("conform").format, "Format")
@@ -70,3 +68,4 @@ vim.api.nvim_create_user_command("LspLog", function()
 end, {
     desc = "Opens the Nvim LSP client log.",
 })
+

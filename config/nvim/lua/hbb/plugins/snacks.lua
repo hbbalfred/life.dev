@@ -63,6 +63,7 @@ return {
         -- Pickers
         { "<leader><space>", function() Snacks.picker.smart() end, desc = "Smart find files" },
         { "<leader>p", function() Snacks.picker.files() end, desc = "Find files" },
+        { "<leader>ff", function() Snacks.picker.files() end, desc = "Find files" },
         { "<leader>fg", function() Snacks.picker.git_files() end, desc = "Find git files" },
         { "<leader>fr", function() Snacks.picker.recent() end, desc = "Recent" },
         { "<leader>fp", function() Snacks.picker.projects() end, desc = "Projects" },
@@ -72,7 +73,8 @@ return {
         { "<leader>sa", function() Snacks.picker.grep() end, desc = "Grep" },
         { "<leader>sb", function() Snacks.picker.grep_buffers() end, desc = "Grep buffers" },
         { "<leader>sd", function() Snacks.picker.diagnostics() end, desc = "Diagnostics" },
-        { "<leader>sD", function() Snacks.picker.diagnostics_buffer() end, desc = "Buffer Diagnostics" },
+        { "<leader>sD", function() Snacks.picker.diagnostics_buffer() end, desc = "Buffer diagnostics" },
+        { "<leader>sc", function() Snacks.picker.command_history() end, desc = "Command history" },
         -- LSP
         { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto definition" },
         { "gD", function() Snacks.picker.lsp_declarations() end, desc = "Goto declaration" },
