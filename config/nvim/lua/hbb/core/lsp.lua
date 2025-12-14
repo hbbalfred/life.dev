@@ -38,10 +38,16 @@ vim.diagnostic.config({
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
+    -- group = vim.api.nvim_create_augroup("lsp_attach_disable_ruff_hover", { clear = true }),
     callback = function(ev)
         local client = vim.lsp.get_client_by_id(ev.data.client_id)
         if not client then
             return
+        end
+
+        if client.name == "ruff" then
+            -- Disable hover in favor of Pyright
+            client.server_capabilities.hoverProvider = false
         end
 
         local kmap = function(keys, func, desc, mode)
@@ -68,4 +74,3 @@ vim.api.nvim_create_user_command("LspLog", function()
 end, {
     desc = "Opens the Nvim LSP client log.",
 })
-
