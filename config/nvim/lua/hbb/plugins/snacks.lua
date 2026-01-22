@@ -28,7 +28,7 @@ return {
         notify = { enabled = true },
         picker = {
             enabled = true,
-            exclude = { "*.uid" },
+            exclude = { "*.uid", ".import" },
             layout = {
                 preset = "dropdown",
             },
