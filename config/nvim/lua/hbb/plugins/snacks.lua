@@ -71,7 +71,7 @@ return {
         { "<leader>up", function() Snacks.terminal("zsh") end, desc = "Float terminal" },
         { "<leader>e", function() Snacks.explorer() end, desc = "File explorer" },
         { "<leader>so", function() Snacks.zen.zoom() end, desc = "Focus pane" },
-        { "<leader>z", function() Snacks.zen() end, desc = "Zen mode" },
+        -- { "<leader>z", function() Snacks.zen() end, desc = "Zen mode" },
         -- Pickers
         { "<leader><space>", function() Snacks.picker.smart() end, desc = "Smart find files" },
         { "<leader>p", function() Snacks.picker.files() end, desc = "Find files" },
