@@ -19,10 +19,11 @@ return {
             width_preview = 80,
         },
         mappings = {
-            close = "<ESC>",
+            close = "<C-q>",
+            go_in = "<C-l>",
             go_in_plus = "<CR>",
             go_out = "H",
-            go_out_plus = "h",
+            go_out_plus = "<C-h>",
         },
     },
 }
