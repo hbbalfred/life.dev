@@ -36,6 +36,6 @@ vim.keymap.set("n", "<leader>s0", "<C-w>o")
 
 -- Tabs
 vim.keymap.set("n", "<leader>ta", ":tabedit<CR>", { silent = true })
-vim.keymap.set("n", "<leader>tc", ":tabclose<CR>", { silent = true })
+vim.keymap.set("n", "<leader>tq", ":tabclose<CR>", { silent = true })
 vim.keymap.set("n", "<leader>tn", ":tabn<CR>", { silent = true })
 vim.keymap.set("n", "<leader>tp", ":tabp<CR>", { silent = true })
