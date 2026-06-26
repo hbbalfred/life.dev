@@ -11,6 +11,7 @@ return {
             python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
             c = { "clang-format" },
             cpp = { "clang-format" },
+            gdscript = { "gdscript-formatter" },
         },
         -- log_level = vim.log.levels.DEBUG,
         formatters = {
@@ -18,6 +19,10 @@ return {
                 command = "csharpier",
                 args = { "format" },
             },
+        },
+        format_on_save = {
+            lsp_fallback = true,
+            timeout_ms = 800,
         },
     },
 }

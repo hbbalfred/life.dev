@@ -19,18 +19,15 @@ return {
             -- ensure these language parsers are installed
             ensure_installed = {
                 "bash",
-                "css",
                 "c_sharp",
                 "dockerfile",
                 "gitignore",
-                "html",
                 "javascript",
                 "json",
                 "lua",
                 "luadoc",
                 "markdown",
                 "markdown_inline",
-                "typescript",
                 "vimdoc",
                 "yaml",
             },

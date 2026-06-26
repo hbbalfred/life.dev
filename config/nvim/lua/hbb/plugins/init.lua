@@ -1,5 +1,6 @@
 return {
     "nvim-lua/plenary.nvim",
     "christoomey/vim-tmux-navigator",
-    -- "inkarkat/vim-ReplaceWithRegister",
+    "mfussenegger/nvim-dap",
+    "rcarriga/nvim-dap-ui",
 }

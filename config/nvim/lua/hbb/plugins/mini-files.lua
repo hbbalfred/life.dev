@@ -14,6 +14,11 @@ return {
         },
     },
     opts = {
+        content = {
+            filter = function(fs_entry)
+                return not vim.endswith(fs_entry.name, ".uid") and not vim.endswith(fs_entry.name, ".import")
+            end,
+        },
         windows = {
             preview = true,
             width_preview = 80,
