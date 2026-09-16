@@ -11,7 +11,7 @@ return {
             python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
             c = { "clang-format" },
             cpp = { "clang-format" },
-            -- gdscript = { "gdscript-formatter" },
+            gdscript = { "gdscript-formatter" },
         },
         -- log_level = vim.log.levels.DEBUG,
         formatters = {
