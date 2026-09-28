@@ -1,12 +1,20 @@
-return {
-    "ellisonleao/gruvbox.nvim",
-    priority = 1000, -- make sure to load this before all the other start plugins
-    config = function()
-        require("gruvbox").setup({
-            contrast = "hard"
-        })
+-- return {
+--     "ellisonleao/gruvbox.nvim",
+--     priority = 1000, -- make sure to load this before all the other start plugins
+--     config = function()
+--         require("gruvbox").setup({
+--             contrast = "hard"
+--         })
+--
+--         -- load the colorscheme here
+--         vim.cmd("colorscheme gruvbox")
+--     end,
+-- }
 
-        -- load the colorscheme here
-        vim.cmd("colorscheme gruvbox")
+return {
+    "whizikxd/naysayer-colors.nvim",
+    lazy = false,
+    config = function()
+        vim.cmd.colorscheme("naysayer")
     end,
 }

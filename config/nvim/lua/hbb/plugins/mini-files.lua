@@ -25,10 +25,10 @@ return {
         },
         mappings = {
             close = "<ESC>",
-            go_in = "<C-l>",
+            -- go_in = "<C-l>",
             go_in_plus = "<CR>",
-            go_out = "H",
-            go_out_plus = "<C-h>",
+            -- go_out = "H",
+            -- go_out_plus = "<C-h>",
         },
     },
 }
